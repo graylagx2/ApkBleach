@@ -12,7 +12,7 @@ This software was developed specifically for Kali-Linux to obfuscate android pay
 
 **Youtube instructional video:**
 
-   https://www.youtube.com/watch?v=tqgscJ93LFw
+[![Watch the video](https://github.com/graylagx2/images/blob/master/Screenshot%20(24).png)](https://www.youtube.com/watch?v=tqgscJ93LFw)
    
 **New Deployment UI feature**
 
