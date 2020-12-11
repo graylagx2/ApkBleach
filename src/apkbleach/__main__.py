@@ -6,7 +6,7 @@ Issues to fix:
 '''
 
 from .bleach import ApkBleach
-from colorama import Fore, Style
+from colorama import Fore
 import os
 import os.path
 import pkg_resources
@@ -110,7 +110,7 @@ def main():
 
 			while True:
 				try:
-					run_server = input()
+					input()
 					print("\033[A   										\033[A")                                                            
 				except KeyboardInterrupt:
 					print('\n\n')
