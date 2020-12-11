@@ -1,4 +1,4 @@
-# apkbleach 2.0
+# apkbleach 2.1
 
 **Update**
    12/11/2020 Fixed package pathways and no longer use /tmp directory
