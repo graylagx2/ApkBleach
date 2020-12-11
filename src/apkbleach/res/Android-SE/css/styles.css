@@ -1,0 +1,77 @@
+/* For Mobile */
+@media screen and (max-width: 540px) {
+  .view {
+    width: 400px;
+  }
+
+  header {
+    width: 100%;
+    height: 110px;
+    background-image: url("../Android-SE/Images/android_background.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    box-shadow: 0px 2px 5px gray;
+  }
+
+  .main-header {
+    margin-bottom: 0px;
+    text-align: center;
+    color: white;
+    background-color: #a4c639;
+    box-shadow: 5px 10px 40px gray;
+    padding-top: 0px;
+    margin-top: 3px;
+    text-shadow: 1px 0 black;
+    font-size: 0.9em;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  .ui-icon-grid {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Chrome, Safari, Opera */
+    transform: scale(1.1);
+  }
+  #description-data {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+  #main-img {
+    max-height: 130px;
+    max-width: 155px;
+    margin-left: 10px;
+  }
+  #table-header {
+    position: relative;
+    float: right;
+    margin-right: 60px;
+    top: 50px;
+  }
+}
+
+/* For Tablets */
+@media screen and (min-width: 540px) and (max-width: 780px) {
+  .view {
+    width: 600px;
+  }
+  header {
+    width: 100%;
+    height: 150px;
+  }
+  .ui-icon-grid {
+    -ms-transform: scale(1.5); /* IE 9 */
+    -webkit-transform: scale(1.5); /* Chrome, Safari, Opera */
+    transform: scale(1.5);
+  }
+  #main-img {
+    max-height: 180px;
+    max-width: 215px;
+    margin-left: 10px;
+  }
+  #table-header {
+    position: relative;
+    float: right;
+    margin-right: 100px;
+    top: 125px;
+  }
+}

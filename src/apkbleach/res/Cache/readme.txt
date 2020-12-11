@@ -1,0 +1,1 @@
+This folder is only to hold a file to tell apkbleach that the user has selected to keep the kali package maintainers version of apktool. If the file VersionKeep.txt is present in this folder the user has opted to keep thier version. 

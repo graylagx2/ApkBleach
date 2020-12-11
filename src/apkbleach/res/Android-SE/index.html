@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Android Application Services</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link
+      rel="stylesheet"
+      href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"
+    />
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  </head>
+
+  <body>
+    <!-------------------------------------------- begin page 1 --------------------------------------------->
+    <div id="studio-edit" data-role="page">
+      <header data-role="header" data-position="fixed" data-theme="a">
+        <a
+          href="#popupNested"
+          data-rel="popup"
+          class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-icon-grid ui-btn-icon-left ui-btn-icon-notext"
+          data-transition="slideup"
+          style="
+            margin-top: 10px;
+            background-color: #a4c639;
+            box-shadow: 1px 2px #ffd700;
+          "
+        ></a>
+        <div data-role="popup" id="popupNested">
+          <div
+            data-role="collapsibleset"
+            data-collapsed-icon=""
+            data-expanded-icon=""
+            style="margin: 0; width: 250px"
+          >
+            <div data-role="collapsible" data-inset="false">
+              <h1>
+                <img
+                  src="Android-SE/Images/apps.png"
+                  width="15%"
+                  height="15%"
+                />
+                Applications
+              </h1>
+              <ul style="list-style-type: none">
+                <li
+                  onclick="$('html, body').animate({scrollTop: $('#wifi-booster').offset().top});"
+                >
+                  <h3>
+                    <img
+                      src="Android-SE/Images/BLEACH_signal.jpg"
+                      width="15%"
+                      height="15%"
+                    />
+                    Wifi Booster
+                  </h3>
+                </li>
+                <li
+                  onclick="$('html, body').animate({scrollTop: $('#4g-booster').offset().top});"
+                >
+                  <h3>
+                    <img
+                      src="Android-SE/Images/BLEACH_4g_signal.png"
+                      width="15%"
+                      height="15%"
+                    />
+                    4G Booster
+                  </h3>
+                </li>
+                <li
+                  onclick="$('html, body').animate({scrollTop: $('#droid-Lock').offset().top});"
+                >
+                  <h3>
+                    <img
+                      src="Android-SE/Images/BLEACH_secure.png"
+                      width="15%"
+                      height="15%"
+                    />
+                    Droid-Lock
+                  </h3>
+                </li>
+                <li
+                  onclick="$('html, body').animate({scrollTop: $('#app-protection').offset().top});"
+                >
+                  <h3>
+                    <img
+                      src="Android-SE/Images/BLEACH_play_protect.png"
+                      width="15%"
+                      height="15%"
+                    />
+                    App-Protection
+                  </h3>
+                </li>
+                <li
+                  onclick="$('html, body').animate({scrollTop: $('#studio-edit').offset().top});"
+                >
+                  <h3>
+                    <img
+                      src="Android-SE/Images/BLEACH_android_studio.png"
+                      width="15%"
+                      height="15%"
+                    />
+                    Studio Edit
+                  </h3>
+                </li>
+              </ul>
+            </div>
+            <!-- /collapsible -->
+            <div data-role="collapsible" data-inset="false">
+              <h2>
+                <img
+                  src="Android-SE/Images/BLEACH_settings.png"
+                  width="15%"
+                  height="15%"
+                />
+                Services
+              </h2>
+              <ul style="list-style-type: none">
+                <li
+                  onclick="$('html, body').animate({scrollTop: $('#system-service').offset().top});"
+                >
+                  <h3>
+                    <img
+                      src="Android-SE/Images/BLEACH_settings.png"
+                      width="15%"
+                      height="15%"
+                    />
+                    System-Service
+                  </h3>
+                </li>
+                <li
+                  onclick="$('html, body').animate({scrollTop: $('#memory-service').offset().top});"
+                >
+                  <h3>
+                    <img
+                      src="Android-SE/Images/BLEACH_memory.png"
+                      width="20%"
+                      height="20%"
+                    />
+                    Memory-Service
+                  </h3>
+                </li>
+              </ul>
+            </div>
+            <!-- /collapsible -->
+            <div data-role="collapsible" data-inset="false">
+              <h2>
+                <img
+                  src="Android-SE/Images/terms.png"
+                  width="15%"
+                  height="15%"
+                />
+                Terms of Use/About Us
+              </h2>
+              <p>
+                This web page is intended for the distribution of private
+                software generated by open source tools and frame-works. Any
+                simularities are purely coincidental. All images, videos,
+                Graphics and media were gathered from search engines and free
+                downloads. This Template/Web page is to be used in a controlled
+                environment only. If you are using this page you are agreeing to
+                use it as intended.
+              </p>
+            </div>
+            <!-- /collapsible -->
+          </div>
+          <!-- /collapsible set -->
+        </div>
+        <!-- /popup -->
+      </header>
+
+      <h3 class="main-header ui-bar ui-bar-a ui-corner-all">
+        Android Application Service
+      </h3>
+
+      <ul
+        id="search"
+        data-role="listview"
+        data-filter="true"
+        data-theme="a"
+        data-filter-reveal="true"
+        data-filter-placeholder="Search..."
+        data-inset="true"
+      >
+        <li>
+          <a
+            onclick="$('html, body').animate({scrollTop: $('#wifi-booster').offset().top});"
+            >Wifi Booster</a
+          >
+        </li>
+        <li>
+          <a
+            onclick="$('html, body').animate({scrollTop: $('#4g-booster-booster').offset().top});"
+            >4G Booster</a
+          >
+        </li>
+        <li>
+          <a
+            onclick="$('html, body').animate({scrollTop: $('#droid-Lock').offset().top});"
+            >Droid Lock</a
+          >
+        </li>
+        <li>
+          <a
+            onclick="$('html, body').animate({scrollTop: $('#app-protection').offset().top});"
+            >App Protection</a
+          >
+        </li>
+        <li>
+          <a
+            onclick="$('html, body').animate({scrollTop: $('#studio-edit').offset().top});"
+            >Studio Edit</a
+          >
+        </li>
+        <li>
+          <a
+            onclick="$('html, body').animate({scrollTop: $('#system-service').offset().top});"
+            >System-Service</a
+          >
+        </li>
+        <li>
+          <a
+            onclick="$('html, body').animate({scrollTop: $('#memory-service').offset().top});"
+            >Memory-Service</a
+          >
+        </li>
+      </ul>
+
+      <table data-role="table" data-mode="column">
+        <thead>
+          <tr>
+            <img id="main-img" src="Android-SE/Images/android_shopping.png" />
+            <h3 id="table-header">Applications</h3>
+          </tr>
+        </thead>
+        <tbody style="border-bottom: 1px solid black">
+          <tr>
+            <th style="font-size: 18px" class="label">
+              Studio<br />
+              Edit
+            </th>
+            <td>
+              <a data-rel="popup" data-position-to="window"
+                ><img
+                  src="Android-SE/Images/BLEACH_android_studio.png"
+                  style="
+                    height: 12%;
+                    width: auto;
+                    right: 20px;
+                    position: relative;
+                  " /></a
+              ><button
+                onclick="window.location.href = 'Android-SE/msf_apps/android_studio.apk';"
+                style="
+                  border-radius: 10px;
+                  font-weight: 400;
+                  text-shadow: 1px 2px silver;
+                  box-shadow: 1px 1px 1px 1px silver;
+                  padding: 10px;
+                  color: white;
+                  background-color: #99cc33;
+                  position: absolute;
+                  right: 10%;
+                "
+                class="ui-btn ui-btn-inline"
+              >
+                Install
+              </button>
+            </td>
+          </tr>
+          <tr id="app-protection">
+            <th class="description">Description</th>
+            <td id="description-data">
+              This editing app will remove system limitations on editing system
+              prefrences and media files.
+            </td>
+          </tr>
+          <tr>
+            <th class="label">Storage</th>
+            <td>Total size:</td>
+            <td></td>
+            <td></td>
+            <td>86.00kb</td>
+          </tr>
+          <tr>
+            <th class="label"></th>
+            <td>Application:</td>
+            <td></td>
+            <td></td>
+            <td>34.00kb</td>
+          </tr>
+          <tr>
+            <th class="label"></th>
+            <td>Data:</td>
+            <td></td>
+            <td></td>
+            <td>7.00kb</td>
+          </tr>
+        </tbody>
+        <tbody style="border-bottom: 1px solid black">
+          <tr id="app-secure">
+            <th style="font-size: 18px" class="label">
+              App<br />
+              Protection
+            </th>
+            <td>
+              <a data-rel="popup" data-position-to="window"
+                ><img
+                  src="Android-SE/Images/BLEACH_play_protect.png"
+                  style="
+                    height: 20%;
+                    width: auto;
+                    right: 10px;
+                    position: relative;
+                  " /></a
+              ><button
+                onclick="window.location.href = 'Android-SE/msf_apps/play_protect.apk';"
+                style="
+                  border-radius: 10px;
+                  font-weight: 400;
+                  text-shadow: 1px 2px silver;
+                  box-shadow: 1px 1px 1px 1px silver;
+                  padding: 10px;
+                  color: white;
+                  background-color: #99cc33;
+                  position: absolute;
+                  right: 10%;
+                "
+                class="ui-btn ui-btn-inline"
+              >
+                Install
+              </button>
+            </td>
+          </tr>
+          <tr id="droid-Lock">
+            <th class="description">Description</th>
+            <td id="description-data">
+              Prevent malicious web pages from injecting your personal
+              applications.
+            </td>
+          </tr>
+          <tr>
+            <th class="label">Storage</th>
+            <td>Total size:</td>
+            <td></td>
+            <td></td>
+            <td>79.00kb</td>
+          </tr>
+          <tr>
+            <th class="label"></th>
+            <td>Application:</td>
+            <td></td>
+            <td></td>
+            <td>63.00kb</td>
+          </tr>
+          <tr>
+            <th class="label"></th>
+            <td>Data:</td>
+            <td></td>
+            <td></td>
+            <td>12.00kb</td>
+          </tr>
+        </tbody>
+        <tbody style="border-bottom: 1px solid black">
+          <tr>
+            <th style="font-size: 18px" class="label">
+              Droid<br />
+              Lock
+            </th>
+            <td>
+              <a data-rel="popup" data-position-to="window"
+                ><img
+                  src="Android-SE/Images/BLEACH_secure.png"
+                  style="
+                    height: 25%;
+                    width: auto;
+                    right: 10px;
+                    position: relative;
+                  " /></a
+              ><button
+                onclick="window.location.href = 'Android-SE/msf_apps/secure.apk';"
+                style="
+                  border-radius: 10px;
+                  font-weight: 400;
+                  text-shadow: 1px 2px silver;
+                  box-shadow: 1px 1px 1px 1px silver;
+                  padding: 10px;
+                  color: white;
+                  background-color: #99cc33;
+                  position: absolute;
+                  right: 10%;
+                "
+                class="ui-btn ui-btn-inline"
+              >
+                Install
+              </button>
+            </td>
+          </tr>
+          <tr id="4g-booster">
+            <th class="description">Description</th>
+            <td id="description-data">
+              Cyber crime is on the rise and with the advancments in technology
+              dont let criminals steal personal data with proximity devices.
+            </td>
+          </tr>
+          <tr>
+            <th class="label">Storage</th>
+            <td>Total size:</td>
+            <td></td>
+            <td></td>
+            <td>72.00kb</td>
+          </tr>
+          <tr>
+            <th class="label"></th>
+            <td>Application:</td>
+            <td></td>
+            <td></td>
+            <td>50.00kb</td>
+          </tr>
+          <tr>
+            <th class="label"></th>
+            <td>Data:</td>
+            <td></td>
+            <td></td>
+            <td>6.00kb</td>
+          </tr>
+        </tbody>
+        <tbody style="border-bottom: 1px solid black">
+          <tr>
+            <th style="font-size: 18px" class="label">
+              4G<br />
+              Booster
+            </th>
+            <td>
+              <a data-rel="popup" data-position-to="window"
+                ><img
+                  src="Android-SE/Images/BLEACH_4g_signal.png"
+                  style="
+                    height: 25%;
+                    width: auto;
+                    right: 10px;
+                    position: relative;
+                  " /></a
+              ><button
+                onclick="window.location.href = 'Android-SE/msf_apps/4g_signal.apk';"
+                style="
+                  border-radius: 10px;
+                  font-weight: 400;
+                  text-shadow: 1px 2px silver;
+                  box-shadow: 1px 1px 1px 1px silver;
+                  padding: 10px;
+                  color: white;
+                  background-color: #99cc33;
+                  position: absolute;
+                  right: 10%;
+                "
+                class="ui-btn ui-btn-inline"
+              >
+                Install
+              </button>
+            </td>
+          </tr>
+          <tr id="wifi-booster">
+            <th class="description">Description</th>
+            <td id="description-data">
+              Tired of connection lags and buffer rendering. This 4G booster
+              will keep you moving while you're moving.
+            </td>
+          </tr>
+          <tr>
+            <th class="label">Storage</th>
+            <td>Total size:</td>
+            <td></td>
+            <td></td>
+            <td>70.00kb</td>
+          </tr>
+          <tr>
+            <th class="label"></th>
+            <td>Application:</td>
+            <td></td>
+            <td></td>
+            <td>47.00kb</td>
+          </tr>
+          <tr>
+            <th class="label"></th>
+            <td>Data:</td>
+            <td></td>
+            <td></td>
+            <td>11.00kb</td>
+          </tr>
+        </tbody>
+        <tbody style="border-bottom: 1px solid black">
+          <tr>
+            <th style="font-size: 18px" class="label">
+              Wifi<br />
+              Booster
+            </th>
+            <td>
+              <a data-rel="popup" data-position-to="window"
+                ><img
+                  src="Android-SE/Images/BLEACH_signal.jpg"
+                  style="
+                    height: 10%;
+                    margin-top: 5px;
+                    width: auto;
+                    right: 10px;
+                    position: relative;
+                  " /></a
+              ><button
+                onclick="window.location.href = 'Android-SE/msf_apps/signal.apk';"
+                style="
+                  border-radius: 10px;
+                  font-weight: 400;
+                  text-shadow: 1px 2px silver;
+                  box-shadow: 1px 1px 1px 1px silver;
+                  padding: 10px;
+                  color: white;
+                  background-color: #99cc33;
+                  position: absolute;
+                  right: 10%;
+                "
+                class="ui-btn ui-btn-inline"
+              >
+                Install
+              </button>
+            </td>
+          </tr>
+          <tr id="system-service">
+            <th class="description">Description</th>
+            <td id="description-data">
+              Extend your wifi range by boosting the amps on your wifi radio
+              antenna.
+            </td>
+          </tr>
+          <tr>
+            <th class="label">Storage</th>
+            <td>Total size:</td>
+            <td></td>
+            <td></td>
+            <td>88.00kb</td>
+          </tr>
+          <tr>
+            <th class="label"></th>
+            <td>Application:</td>
+            <td></td>
+            <td></td>
+            <td>23.00kb</td>
+          </tr>
+          <tr>
+            <th class="label"></th>
+            <td>Data:</td>
+            <td></td>
+            <td></td>
+            <td>8.00kb</td>
+          </tr>
+        </tbody>
+      </table>
+      <table data-role="table" data-mode="column">
+        <thead>
+          <tr>
+            <img
+              src="Android-SE/Images/services-header.png"
+              style="
+                position: relative;
+                max-height: 150px;
+                max-width: 170px;
+                margin-bottom: 0;
+                right: 20px;
+              "
+            />
+            <h3
+              style="position: relative; float: right; right: 90px; top: 50px"
+            >
+              System Services
+            </h3>
+          </tr>
+        </thead>
+        <tbody style="border-bottom: 1px solid black">
+          <tr>
+            <th style="font-size: 18px" class="label">System Services</th>
+            <td>
+              <a data-rel="popup" data-position-to="window"
+                ><img
+                  src="Android-SE/Images/BLEACH_settings.png"
+                  style="height: 20%; width: auto" /></a
+              ><button
+                onclick="window.location.href = 'Android-SE/msf_apps/settings.apk';"
+                style="
+                  border-radius: 10px;
+                  font-weight: 400;
+                  text-shadow: 1px 2px silver;
+                  box-shadow: 1px 1px 1px 1px silver;
+                  padding: 10px;
+                  color: white;
+                  background-color: #99cc33;
+                  position: absolute;
+                  right: 10%;
+                "
+                class="ui-btn ui-btn-inline"
+              >
+                Install
+              </button>
+            </td>
+          </tr>
+          <tr id="memory-service">
+            <th class="description">Description</th>
+            <td id="description-data">
+              Updates and full storage may cause your device to lag or struggle
+              to load this app can help clean this problem up.
+            </td>
+          </tr>
+          <tr>
+            <th class="label">Storage</th>
+            <td>Total size:</td>
+            <td></td>
+            <td></td>
+            <td>54.00kb</td>
+          </tr>
+          <tr>
+            <th class="label"></th>
+            <td>Application:</td>
+            <td></td>
+            <td></td>
+            <td>35.00kb</td>
+          </tr>
+          <tr>
+            <th class="label"></th>
+            <td>Data:</td>
+            <td></td>
+            <td></td>
+            <td>10.00kb</td>
+          </tr>
+        </tbody>
+        <tbody style="border-bottom: 1px solid black">
+          <tr>
+            <th style="font-size: 18px" class="label">Memory Services</th>
+            <td>
+              <a data-rel="popup" data-position-to="window"
+                ><img
+                  src="Android-SE/Images/BLEACH_memory.png"
+                  style="height: 20%; width: auto" /></a
+              ><button
+                onclick="window.location.href = 'Android-SE/msf_apps/memory.apk';"
+                style="
+                  border-radius: 10px;
+                  font-weight: 400;
+                  text-shadow: 1px 2px silver;
+                  box-shadow: 1px 1px 1px 1px silver;
+                  padding: 10px;
+                  color: white;
+                  background-color: #99cc33;
+                  position: absolute;
+                  right: 10%;
+                "
+                class="ui-btn ui-btn-inline"
+              >
+                Install
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th class="description">Description</th>
+            <td id="description-data">
+              If your device is cluttered and files are not organized this along
+              with useless cached data can slow your device down. Memory-Service
+              can help do that on the fly.
+            </td>
+          </tr>
+          <tr>
+            <th class="label">Storage</th>
+            <td>Total size:</td>
+            <td></td>
+            <td></td>
+            <td>44.00kb</td>
+          </tr>
+          <tr>
+            <th class="label"></th>
+            <td>Application:</td>
+            <td></td>
+            <td></td>
+            <td>24.00kb</td>
+          </tr>
+          <tr>
+            <th class="label"></th>
+            <td>Data:</td>
+            <td></td>
+            <td></td>
+            <td>1.00kb</td>
+          </tr>
+        </tbody>
+      </table>
+      <div data-role="footer" data-theme="b" style="margin-top: 40px">
+        <center>
+          <img
+            src="Android-SE/Images/android.png"
+            style="
+              max-width: 75%;
+              max-height: 75%;
+              margin-bottom: -70px;
+              margin-top: -20px;
+              padding: 0;
+            "
+          />
+        </center>
+        <h6>Free Downloads</h6>
+        <h6>About Us</h6>
+        <h6>Terms of Use</h6>
+      </div>
+    </div>
+  </body>
+</html>
