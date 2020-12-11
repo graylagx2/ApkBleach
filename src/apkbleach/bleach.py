@@ -5,16 +5,14 @@ Issues to fix:
 	spaghetti code like a mother!!!!!
 '''
 
-import argparse
-from argparse import RawTextHelpFormatter
-from colorama import Fore, Style
+from argparse import argparse, RawTextHelpFormatter
+from colorama import Fore
 import fileinput
 import os
 import os.path
 from PIL import Image
 import pkg_resources
 import random
-import re
 import requests
 import shutil
 import string
@@ -167,7 +165,7 @@ class ApkBleach:
 
 				if apktool == 1:
 
-					if keep_version == None: 
+					if keep_version is None: 
 						subprocess.call(['bash', '-c', "sudo apt-get install apktool -y"], stdout=subprocess.PIPE)
 
 					jar_file_url = 'https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool'
