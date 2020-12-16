@@ -77,9 +77,9 @@ class ApkBleach:
 			self.payload = args.generate[0]
 			self.lhost = args.generate[1]
 			self.lport = args.generate[2]
-		except:
+		except Exception as error:
 			subprocess.call(['bash', '-c', "apkbleach -h"])
-			sys.exit()
+			sys.exit(error)
 
 		self.stealth_num = args.stealth
 		self.stealth_path =  pkg_resources.resource_filename(__name__, f'res/Stealth') if self.stealth_num else False
@@ -97,9 +97,10 @@ class ApkBleach:
 					self.icon_path = self.icon
 				except FileNotFoundError:
 					sys.exit(f"\n{Fore.YELLOW}[{Fore.RED}Error{Fore.YELLOW}] Could not validate icon check spelling or path\n{Fore.WHITE}")
-				except:
-					sys.exit(f"\n{Fore.YELLOW}[{Fore.RED}Error{Fore.YELLOW}] Not a valid image format \n{Fore.WHITE}")
-		except:
+				except Exception as error: 
+					sys.exit(f"\n{Fore.YELLOW}[{Fore.RED}Error{Fore.YELLOW}] Not a valid image format \n{Fore.WHITE}", error)
+		except Exception as error: 
+			print(error)
 			pass
 
 		if not args.deploy_all:
