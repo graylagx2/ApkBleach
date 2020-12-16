@@ -73,7 +73,8 @@ def main():
 			stop_spin = True
 			icon_inject_loading.join()
 			print("\n")		
-	except: 
+	except Exception as error: 
+		print(error)
 		pass
 
 	if start.deploy_all:
@@ -153,7 +154,9 @@ def main():
 			print(f"\n{Fore.YELLOW}[{Fore.GREEN}Complete{Fore.YELLOW}]{Fore.RESET}")  
 			print(f"\t\t\b{Fore.GREEN}\033[4mApk saved as: {start.output_file}{Fore.WHITE}\033[0m".center(os.get_terminal_size().columns))
 			print('\n')
-	except:
+			
+	except Exception as error: 
+		print(error)
 		pass
 
 if __name__ == "__main__":
