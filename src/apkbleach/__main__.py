@@ -104,8 +104,7 @@ def main():
 		print("\n")
 
 		if len(os.listdir('/var/www/html/Android-SE/msf_apps')) >= 8:
-		
-			run_server = ""
+			
 			print(f"{Fore.YELLOW}Bleach server is running on localhost {Fore.GREEN} [*]\n\n")
 			print(f"\t\t{Fore.YELLOW}[{Fore.BLUE}Info{Fore.YELLOW}] {Fore.BLUE}Use ctrl+c to shut down the deployment server and restore defaults{Fore.BLACK}".center(os.get_terminal_size().columns))
 
