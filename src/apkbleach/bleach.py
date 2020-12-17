@@ -101,7 +101,6 @@ class ApkBleach:
 					sys.exit(f"\n{Fore.YELLOW}[{Fore.RED}Error{Fore.YELLOW}] Not a valid image format \n{Fore.WHITE}", error)
 		except Exception as error: 
 			print(error)
-			pass
 
 		if not args.deploy_all:
 			self.output_file = args.output[0]
