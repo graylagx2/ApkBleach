@@ -75,7 +75,6 @@ def main():
 			print("\n")		
 	except Exception as error: 
 		print(error)
-		pass
 
 	if start.deploy_all:
 		stop_spin = False
@@ -156,7 +155,6 @@ def main():
 			
 	except Exception as error: 
 		print(error)
-		pass
 
 if __name__ == "__main__":
 	main()
