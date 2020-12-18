@@ -87,7 +87,7 @@ class ApkBleach:
 
 		try:
 			self.icon = args.icon[0]
-			bleach_icons = [ i.strip('.png') for i in pkg_resources.resource_listdir("apkbleach", "res/Icons") ]
+			bleach_icons = [ i.strip('.png') for i in pkg_resources.resource_listdir(__name__, "res/Icons") ]
 
 			if self.icon in bleach_icons:
 				self.icon_path = pkg_resources.resource_filename(__name__, f'res/Icons/{self.icon}.png')
