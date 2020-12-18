@@ -5,7 +5,8 @@ Issues to fix:
 	spaghetti code like a mother!!!!!
 '''
 
-from argparse import argparse, RawTextHelpFormatter
+import argparse
+from argparse import RawTextHelpFormatter
 from colorama import Fore
 import fileinput
 import os
