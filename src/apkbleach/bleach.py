@@ -104,7 +104,7 @@ class ApkBleach:
 			print(error)
 
 		if not args.deploy_all:
-			self.output_file = args.output[0]
+			self.output_file = args.output[0] if args.output else sys.exit(f"\n{Fore.YELLOW}[{Fore.RED}Error{Fore.YELLOW}] Looks like you forgot to set an output file \n{Fore.WHITE}")
 
 			self.app_name = self.output_file.split('.', -1)[-2].split('/')[-1] if self.output_file.split('.', -1)[-1] == 'apk' else sys.exit(f"\n{Fore.YELLOW}[{Fore.RED}Error{Fore.YELLOW}] Your ouput path should be a .apk\n{Fore.WHITE}")
 			
