@@ -7,7 +7,7 @@ setup(
     author_email = "graylagx2@gmail.com",
     description = ("Payload obfuscation and icon injection"),
     url = "https://github.com/graylagx2/apkbleach",
-    packages=['apkbleach'],
+    packages=['apkbleach', 'apkbleach'],
     package_dir={'apkbleach': 'src'},
     package_data={'apkbleach': ['res/*']},
     install_requires=[
