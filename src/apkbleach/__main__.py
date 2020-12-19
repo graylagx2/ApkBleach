@@ -73,8 +73,8 @@ def main():
 			stop_spin = True
 			icon_inject_loading.join()
 			print("\n")		
-	except Exception as error: 
-		print(error)
+	except AttributeError: 
+		pass
 
 	if start.deploy_all:
 		stop_spin = False
