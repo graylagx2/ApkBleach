@@ -1,15 +1,11 @@
 [![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/graylagx2/ApkBleach.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/graylagx2/ApkBleach/context:python)
 # apkbleach 2.1
 
-**Update**
-   12/11/2020 Fixed package pathways and no longer use /tmp directory
-   11/24/2020 Fixed custom icon injection bug and jarsigner installation bug! Shout out to @VioletChan on youtube for reporting the bug.
-
-![Screen shot of sofware image](https://github.com/graylagx2/Images/blob/master/apkbleach2_final.png)
-
 **About:**
 
 This software was developed specifically for Kali-Linux to obfuscate android payloads in attempts to evade detection. This software also automates the process of changing the app icon, changing the app name, signing the apk, aligning the apk and installing or upgrading apktool.
+
+![Screen shot of sofware image](https://github.com/graylagx2/Images/blob/master/apkbleach2_final.png)
 
 **Youtube instructional video:**
 
