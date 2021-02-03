@@ -186,7 +186,7 @@ class ApkBleach:
 				if jarsigner != 0:
 					print(f"{Fore.YELLOW}This may take a long time dont be alarmed! You're missing jarsigner which means default-jdk must be installed please wait...\n")
 					subprocess.call(['bash', '-c', "sudo apt-get install openjdk-14-jdk -y"], stdout=subprocess.PIPE)
-					repeat_num = 5
+					repeat_num = 6
 
 
 			except (requests.ConnectionError, requests.Timeout):
@@ -196,7 +196,7 @@ class ApkBleach:
 				print(f"{Fore.YELLOW}Dependencies installed {Fore.GREEN}[*]")
 				sleep(1)
 				for repeat in range(repeat_num):
-						print("\033[A                                                                               \033[A")
+						print("\033[A                                                                                                                                      \033[A")
 
 		else:
 			print(f"{Fore.YELLOW}Dependencies met [{Fore.GREEN}*{Fore.YELLOW}]")
