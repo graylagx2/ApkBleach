@@ -185,7 +185,7 @@ class ApkBleach:
 
 				if jarsigner != 0:
 					print(f"{Fore.YELLOW}This may take a long time dont be alarmed! You're missing jarsigner which means default-jdk must be installed please wait...\n")
-					subprocess.call(['bash', '-c', "sudo apt-get install openjdk-14-jdk -y"], stdout=subprocess.PIPE)
+					subprocess.call(['bash', '-c', "sudo  apt-get install openjdk-14-jdk -y 2>/dev/null || sudo apt-get install default-jdk-headless -y"], stdout=subprocess.PIPE)
 					repeat_num = 6
 
 
