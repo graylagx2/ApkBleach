@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 '''
 Issues to fix:
@@ -184,8 +184,8 @@ class ApkBleach:
 				repeat_num = 3
 
 				if jarsigner != 0:
-					print(f"{Fore.YELLOW}This may take a long time dont be alarmed! You're missing jarsigner which means default-jdk must be installed please wait...\n")
-					subprocess.call(['bash', '-c', "sudo  apt-get install openjdk-14-jdk -y 2>/dev/null || sudo apt-get install default-jdk-headless -y"], stdout=subprocess.PIPE)
+					print(f"{Fore.YELLOW}This may take a long time don't be alarmed! You're missing jarsigner which means default-jdk must be installed please wait...\n")
+					subprocess.call(['bash', '-c', "sudo  apt-get install openjdk-11-jdk -y 2>/dev/null || sudo apt-get install default-jdk-headless -y"], stdout=subprocess.PIPE)
 					repeat_num = 6
 
 
