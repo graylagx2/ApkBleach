@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 '''
 Issues to fix:
@@ -21,6 +21,8 @@ import sys
 import subprocess
 from time import sleep
 import urllib.request
+
+init(autoreset=True)
 
 class ApkBleach:
 
@@ -133,26 +135,29 @@ class ApkBleach:
 
 
 	def check_dependencies(self):
-		apktool_version = os.popen("apktool --version 2>/dev/null").read().strip('\n') 
+		apktool_version = os.popen("apktool --version 2>/dev/null").read().strip('\n')
 		apktool = subprocess.call(['bash', '-c', "dpkg-query -s apktool &>/dev/null"], stdout=subprocess.PIPE)
 		zipalign = subprocess.call(['bash', '-c', "dpkg-query -s zipalign &>/dev/null"], stdout=subprocess.PIPE)
 		jarsigner = subprocess.call(['bash', '-c', "jarsigner &>/dev/null"], stdout=subprocess.PIPE)
 
-		if not os.path.isfile(pkg_resources.resource_filename(__name__, f'res/Cache/VersionKeep.txt')):
+		version_file_path = pkg_resources.resource_filename(__name__, 'res/Cache/VersionKeep.txt')
+
+		if not os.path.isfile(version_file_path):
 			if 'dirty' in apktool_version:
 				print(f'{Fore.YELLOW}\n[{Fore.BLUE}*{Fore.YELLOW}] Upgrade apktool {apktool_version} !\n')
-				print(f'{Fore.YELLOW}Detected package maintainers version of {Fore.BLUE}apktool {apktool_version} {Fore.YELLOW}are you sure its working?\n')
-				print(f'{Fore.YELLOW}apktool {apktool_version} cause version error in the msfvenom -x option for template injection. We recomend you do not keep this version\n')
+				print(f'{Fore.YELLOW}Detected package maintainers version of {Fore.BLUE}apktool {apktool_version} {Fore.YELLOW}are you sure it\'s working?\n')
+				print(f'{Fore.YELLOW}apktool {apktool_version} causes version error in the msfvenom -x option for template injection. We recommend you do not keep this version\n')
 				print(f'{Fore.YELLOW}You will not see this message again if you choose to keep your current version unless you run apkbleach --clear-cache\n')
+				
 				keep_version = input(f'Would you like to keep your current version of apktool? [y/n]: ').upper()
-				if keep_version == 'N' or keep_version == 'NO':
+
+				if keep_version in ['N', 'NO']:
 					subprocess.call(['bash', '-c', "sudo rm /usr/bin/apktool"], stdout=subprocess.PIPE)
 					apktool = 1
-				elif keep_version == 'Y' or keep_version == 'YES':
-					with open(pkg_resources.resource_filename(__name__, f'res/Cache/VersionKeep.txt'), "a+") as f:
-	  					f.write(f'Keeping apktool version {apktool_version}')
+				elif keep_version in ['Y', 'YES']:
+					with open(version_file_path, "a+") as f:
+						f.write(f'Keeping apktool version {apktool_version}')
 
-				
 				for repeat in range(12):
 					print("\033[A                                                                                        \033[A")
 			else:
@@ -165,12 +170,11 @@ class ApkBleach:
 				subprocess.call(['bash', '-c', "sudo apt-get install zipalign -y"], stdout=subprocess.PIPE) if zipalign == 1 else False
 
 				if apktool == 1:
-
 					if keep_version is None: 
 						subprocess.call(['bash', '-c', "sudo apt-get install apktool -y"], stdout=subprocess.PIPE)
 
 					jar_file_url = 'https://raw.githubusercontent.com/iBotPeaches/Apktool/master/scripts/linux/apktool'
-					apktool_file_url = 'https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.4.1.jar'
+					apktool_file_url = 'https://bitbucket.org/iBotPeaches/apktool/downloads/apktool_2.9.1.jar'
 
 					with urllib.request.urlopen(jar_file_url) as response, open('apktool.jar', 'wb') as out_file:
 						shutil.copyfileobj(response, out_file)
@@ -184,13 +188,12 @@ class ApkBleach:
 				repeat_num = 3
 
 				if jarsigner != 0:
-					print(f"{Fore.YELLOW}This may take a long time dont be alarmed! You're missing jarsigner which means default-jdk must be installed please wait...\n")
-					subprocess.call(['bash', '-c', "sudo  apt-get install openjdk-14-jdk -y 2>/dev/null || sudo apt-get install default-jdk-headless -y"], stdout=subprocess.PIPE)
+					print(f"{Fore.YELLOW}This may take a long time don't be alarmed! You're missing jarsigner which means default-jdk must be installed please wait...\n")
+					subprocess.call(['bash', '-c', "sudo  apt-get install openjdk-11-jdk -y 2>/dev/null || sudo apt-get install default-jdk-headless -y"], stdout=subprocess.PIPE)
 					repeat_num = 6
 
-
 			except (requests.ConnectionError, requests.Timeout):
-				sys.exit(f"\n{Fore.YELLOW}[{Fore.RED}Error{Fore.YELLOW}] Some dependencies are missing. A internet connection is needed to install them. Please connect to the internet and try again\n{Fore.WHITE}")
+				sys.exit(f"\n{Fore.YELLOW}[{Fore.RED}Error{Fore.YELLOW}] Some dependencies are missing. An internet connection is needed to install them. Please connect to the internet and try again\n{Fore.WHITE}")
 
 			else:
 				print(f"{Fore.YELLOW}Dependencies installed {Fore.GREEN}[*]")

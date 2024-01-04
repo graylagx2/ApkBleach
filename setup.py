@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 from setuptools import setup
 
 setup(
@@ -5,8 +7,10 @@ setup(
     version = "2.1",
     author = "graylagx2",
     author_email = "graylagx2@gmail.com",
+    contibutor = "Atul"
+    contibutor_Repo = "https://github.com/Atuls-git/"
     description = ("Payload obfuscation and icon injection"),
-    url = "https://github.com/graylagx2/apkbleach",
+    url = "https://github.com/graylagx2/ApkBleach",
     packages=['apkbleach', 'apkbleach'],
     package_dir={'apkbleach': 'src'},
     package_data={'apkbleach': ['res/*']},
